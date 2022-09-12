@@ -1,4 +1,8 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+interface FormFieldProps{
+    fieldSize?: "small" | "regular" | "large"
+}
 
 export const CheckoutContainer = styled.div`
     background-color: ${({theme}) => theme.background};
@@ -33,10 +37,29 @@ export const AdressInfoFormSection = styled.div`
     margin-top: 32px;
     display: flex;
     flex-direction: column;
+    width: 560px;
+    border-radius: 6px;
+`
+export const FormField = styled.input<FormFieldProps>`
+    background-color: ${({theme}) => theme["base-button"]};
+    border: none;
+    //flex: 1;
+    margin: 16px 12px;
+    padding: 12px;
+    border-radius: 4px;
+    ${({fieldSize}) => 
+        fieldSize == "small" ? 
+            css`width: 85px;` : 
+        fieldSize == "large" ? 
+            css`width: 540px;` :
+        fieldSize == "regular" ?
+             css`width: 200px;` :
+             css`width: 312px;`
+        };
 `
 export const Subtitulo = styled.h1`
     color: ${({theme}) => theme["base-subtitled"]};
-    font-family: Baloo 2, sans-serif;
+    font-family: "Baloo 2", sans-serif;
     font-weight: 700;
     font-size: 1.125rem;
     margin-bottom: 15px;

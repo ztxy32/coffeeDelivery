@@ -1,6 +1,6 @@
 import { MapPinLine } from "phosphor-react";
 import { Header } from "../../components/Header";
-import { CheckoutContainer, AdressInfo,PurchaseInfo, Subtitulo, AdressInfoDescription, AdressInfoDescriptionTitle, AdressInfoDescriptionSubtitle, AdressInfoFormSection } from "./styles";
+import { CheckoutContainer, AdressInfo,PurchaseInfo, Subtitulo, AdressInfoDescription, AdressInfoDescriptionTitle, AdressInfoDescriptionSubtitle, AdressInfoFormSection, FormField } from "./styles";
 
 export function Checkout(){
     return (
@@ -20,13 +20,13 @@ export function Checkout(){
 
                             <AdressInfoFormSection>
                                 <form action="">
-                                    <input type="text" placeholder="CEP"/>
-                                    <input type="text" placeholder="Rua"/>
-                                    <input type="text" placeholder="Número"/>
-                                    <input type="text" placeholder="Complemento"/>
-                                    <input type="text" placeholder="Bairro"/>
-                                    <input type="text" placeholder="Cidade"/>
-                                    <input type="text" placeholder="UF"/>
+                                    <FormField type="text" placeholder="CEP" fieldSize="regular"/>
+                                    <FormField type="text" placeholder="Rua" fieldSize="large"/>
+                                    <FormField type="text" placeholder="Número" fieldSize="regular"/>
+                                    <FormField type="text" placeholder="Complemento"/>
+                                    <FormField type="text" placeholder="Bairro" fieldSize="regular"/>
+                                    <FormField type="text" placeholder="Cidade" fieldSize="regular"/>
+                                    <FormField type="text" placeholder="UF" fieldSize="small"/>
                                 </form>
                             </AdressInfoFormSection>
                         </AdressInfo>
